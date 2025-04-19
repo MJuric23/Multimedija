@@ -1,0 +1,248 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('kosarka2.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    margin-bottom: 30px;
+}
+.sport-image {
+    transition: transform 0.3s;
+    margin-bottom: 15px;
+}
+.sport-image:hover {
+    transform: scale(1.03);
+}
+.student-card {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.student-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #0d6efd;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.student-img:hover {
+    transform: scale(1.05);
+}
+.student-name {
+    cursor: pointer;
+    color: #0d6efd;
+    margin-top: 10px;
+}
+.audio-section, .video-section {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+.other-sports {
+    background-color: #f1f8ff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.other-sports a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0d6efd;
+}
+.other-sports a:hover {
+    text-decoration: underline;
+}
+.rules-list {
+    column-count: 2;
+    column-gap: 20px;
+}
+
+/* NOVI STILOVI ZA PORAVNANJE */
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.section-text {
+    flex: 1;
+    min-width: 300px;
+}
+.section-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.media-images-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.media-image-col {
+    flex: 0 0 300px;
+    max-width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .rules-list {
+        column-count: 1;
+    }
+    .section-container {
+        flex-direction: column;
+    }
+    .media-image-col {
+        flex: 0 0 100%;
+    }
+}
+/* DODAJ OVO NA KRAJ TVOG CSS-A */
+
+/* Narandžasta tema za većinu linkova */
+a {
+    color: #e67e22; /* Osnovna narandžasta */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #d35400; /* Tamnija narandžasta na hover */
+}
+
+/* Navbar linkovi - ostavljamo originalne Bootstrapove boje */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: white;
+}
+
+/* Footer linkovi - ostavljamo bijele */
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #f8f9fa;
+}
+
+/* Specifični linkovi za druge sportove */
+/* Marijev izbor - nogomet (zelena) */
+.other-sports .col-md-6:first-child a {
+    color: #27ae60; /* Zelena */
+}
+
+.other-sports .col-md-6:first-child a:hover {
+    color: #2ecc71; /* Svjetlija zelena */
+}
+
+/* Antunov izbor - tenis (žuta) */
+.other-sports .col-md-6:last-child a {
+    color: #f1c40f; /* Žuta */
+}
+
+.other-sports .col-md-6:last-child a:hover {
+    color: #f39c12; /* Narandžasto-žuta */
+}
+
+/* Student card linkovi */
+.student-card a {
+    color: #e67e22; /* Narandžasta */
+    text-decoration: none;
+}
+
+.student-card a:hover {
+    color: #d35400; /* Tamnija narandžasta */
+    text-decoration: underline;
+}
+
+/* Modal linkovi */
+.modal-body a {
+    color: #e67e22;
+}
+
+.modal-body a:hover {
+    color: #d35400;
+}
+/* DODAJ OVO U TVOJ CSS */
+
+/* Promjena boje obruba slika iz plavog u narandžasto */
+.student-img {
+    border: 3px solid #e67e22; /* Promijenjeno iz #0d6efd (plavo) u #e67e22 (narandžasto) */
+    transition: transform 0.3s, border-color 0.3s; /* Dodali smo transition za border-color */
+}
+
+.student-img:hover {
+    border-color: #d35400; /* Tamnije narandžasto na hover */
+}
+
+/* Promjena boje imena iz plavog u narandžasto */
+.student-name {
+    color: #e67e22 !important; /* Narandžasta boja umjesto plave */
+    transition: color 0.3s;
+}
+
+.student-name:hover {
+    color: #d35400 !important; /* Tamnije narandžasto na hover */
+}
+
+/* Ako želiš da imena budu podcrtana na hover */
+.student-name:hover {
+    text-decoration: underline;
+}
+
+.other-sports {
+    background-color: #fff5e6; /* Svijetla narandžasta nijansa */
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    border: 1px solid #ffcc80; /* Svjetlija narandžasta za obrub */
+}
+
+.audio-section {
+    background-color: #fff5e6; /* Svijetla narandžasta nijansa */
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    border: 1px solid #ffcc80; /* Svjetlija narandžasta za obrub */
+}
+/* Stilizacija audio playera */
+#audio-section audio {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(230, 126, 34, 0.2);
+    background-color: #fff9e6;
+}
+
+#audio-section audio::-webkit-media-controls-panel {
+    background-color: #fff9e6;
+    border-radius: 25px;
+}
+
+#audio-section audio::-webkit-media-controls-play-button,
+#audio-section audio::-webkit-media-controls-mute-button {
+    filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(10deg);
+}
+
+.video-section {
+    background-color: #fff5e6; /* Svijetla narandžasta nijansa */
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    border: 1px solid #ffcc80; /* Svjetlija narandžasta za obrub */
+}
