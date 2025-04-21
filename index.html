@@ -116,8 +116,7 @@
 
             <!-- Audio Section -->
             <div class="audio-section" id="audio-section">
-                <h4 class="mb-3">Zvuk košarke</h4>
-                <p>Poslušajte atmosferu s košarkaške utakmice:</p>
+                <h4 class="mb-3">Poslušajte atmosferu s košarkaške utakmice:</h4>
                 <audio controls class="w-100">
                     <source src="curry.mp3" type="audio/mpeg">
                 </audio>
@@ -125,7 +124,7 @@
 
             <!-- Video Section -->
             <div class="video-section mt-4" id="video-section">
-                <h4 class="mb-3">Video najboljih trenutaka</h4>
+                <h4 class="mb-3">Video</h4>
                 <div class="ratio ratio-16x9">
                     <iframe src="Wade.mp4" title="Košarkaški highlights" allowfullscreen></iframe>
                 </div>
@@ -157,27 +156,55 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="student-card">
-                        <img src="https://placehold.jp/150x150.jpg" alt="Mario" class="student-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="https://placehold.jp/600x600.jpg">
-                        <h4 class="student-name" data-bs-toggle="modal" data-bs-target="#studentModal" data-name="Mario Jurić" data-birth="Osijek" data-live="Osijek" data-elementary="Osnovna škola Osijek" data-high="Srednja škola Osijek" data-faculty="FERIT Osijek">Mario Jurić</h4>
+                        <img src="mario.jpeg" alt="Mario" class="student-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="mario.jpeg">
+                        <h4 class="student-name" data-bs-toggle="modal" data-bs-target="#studentModal" data-name="Mario Jurić" data-birth="Brčko" data-live="Orašje" data-elementary="Osnovna škola Orašje" data-high="Srednja strukovna škola Orašje" data-faculty="FERIT Osijek">Mario Jurić</h4>
                         <div class="answer-section">
                             <h5>Bavim li se i ja ovim sportom ili ga samo volim?</h5>
-                            <p>Košarku aktivno igram već 8 godina i trenutno sam član lokalnog košarkaškog kluba. Najdraži mi je NBA igrač Stephen Curry zbog njegove izuzetne šuterske preciznosti. <a href="#">Pogledajte moj highlight video</a></p>
+                            <p>Košarku aktivno igram već 8 godina i trenutno sam član lokalnog košarkaškog kluba. Najdraži mi je NBA igrač Stephen Curry zbog njegove izuzetne šuterske preciznosti. <a href="#" data-bs-toggle="modal" data-bs-target="#videoHighlightModal">Pogledajte moj highlight video</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="student-card">
-                        <img src="https://placehold.jp/150x150.png" alt="Antun" class="student-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="https://placehold.jp/600x600.png">
-                        <h4 class="student-name" data-bs-toggle="modal" data-bs-target="#studentModal" data-name="Antun Korpar" data-birth="Zagreb" data-live="Osijek" data-elementary="Osnovna škola Zagreb" data-high="Srednja škola Zagreb" data-faculty="FERIT Osijek">Antun Korpar</h4>
+                        <img src="antun.jpg" alt="Antun" class="student-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="antun.jpg">
+                        <h4 class="student-name" data-bs-toggle="modal" data-bs-target="#studentModal" data-name="Antun Korpar" data-birth="Osijek" data-live="Belišće" data-elementary="Ivana Kukuljevića Belišće" data-high="Elektrotehnička i prometna škola Osijek" data-faculty="FERIT Osijek">Antun Korpar</h4>
                         <div class="answer-section">
                             <h5>Bavim li se i ja ovim sportom ili ga samo volim?</h5>
-                            <p>Iako ne igram košarku aktivno, veliki sam ljubitelj NBA lige i redovito pratim utakmice. Posebno uživam gledati Lakerse i njihovu bogatu povijest. <a href="#">Poslušajte moj podcast o košarci</a></p>
+                            <p>Iako ne igram košarku aktivno, veliki sam ljubitelj NBA lige i redovito pratim utakmice. Posebno uživam gledati Lakerse i njihovu bogatu povijest. <a href="#" data-bs-toggle="modal" data-bs-target="#antunVideoHighlightModal">Poslušajte moj podcast o košarci</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // Mario's video
+    var marioVideoModal = document.getElementById('videoHighlightModal');
+    var marioVideo = marioVideoModal.querySelector('video');
+    
+    marioVideoModal.addEventListener('show.bs.modal', function() {
+        marioVideo.play();
+    });
+    
+    marioVideoModal.addEventListener('hide.bs.modal', function() {
+        marioVideo.pause();
+        marioVideo.currentTime = 0;
+    });
+
+    // Antun's video
+    var antunVideoModal = document.getElementById('antunVideoHighlightModal');
+    var antunVideo = antunVideoModal.querySelector('video');
+    
+    antunVideoModal.addEventListener('show.bs.modal', function() {
+        antunVideo.play();
+    });
+    
+    antunVideoModal.addEventListener('hide.bs.modal', function() {
+        antunVideo.pause();
+        antunVideo.currentTime = 0;
+    });
+});</script>
+    
 
     <!-- Footer -->
     <footer style="background-color: #e68c03;">
@@ -236,6 +263,46 @@
         </div>
     </div>
 
+        <!-- Mario Video Highlight Modal -->
+        <div class="modal fade" id="videoHighlightModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Mario's Basketball Highlights</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="ratio ratio-16x9">
+                            <video controls>
+                                <source src="mariovideo.mp4" type="video/mp4">
+                                Vaš preglednik ne podržava HTML5 video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Antun Video Highlight Modal -->
+    <div class="modal fade" id="antunVideoHighlightModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Antun's Basketball Podcast</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="ratio ratio-16x9">
+                    <video controls>
+                        <source src="antunvideo.mp4" type="video/mp4">
+                        Vaš preglednik ne podržava HTML5 video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
@@ -271,7 +338,7 @@
                 document.getElementById('highLink').textContent = high;
                 document.getElementById('highLink').href = 'https://www.google.com/search?q=' + encodeURIComponent(high);
                 document.getElementById('facultyLink').textContent = faculty;
-                document.getElementById('facultyLink').href = 'https://www.google.com/search?q=' + encodeURIComponent(faculty);
+                document.getElementById('facultyLink').href = 'https://www.ferit.unios.hr';
             });
 
             // Sport Modal
