@@ -54,8 +54,8 @@
                 <div class="section-text">
                     <p>Košarka je sport u kojem se dva tima od po 5 igrača bore postići što više poena (koševa) ubacivanjem lopte kroz obruč protivničkog tima, uz skup određenih pravila. Izumio ju je Kanađanin James Naismith 1891. godine, ustanovivši 13 osnovnih pravila.</p>
                     <p>Iako je košarka primarno američki sport, ubrzo je postala i međunarodni i danas gotovo da nema zemlje u kojoj se ne igra. Olimpijski status stekla je 1936. To je sport i za muškarce i za žene.</p>
-                    <p>Igra se u 2 glavne verzije: američkoj NBA i međunarodnoj FIBA. Između NBA i FIBA-e postoji niz razlika: dužina trajanja utakmice, broj ličnih grešaka, dimenzije terena, ograničenja itd. Po pravilima koje propisuje FIBA, igraju se sva važna međunarodna takmičenja.</p>
-                    <p>Dok se uobičajena takmičarska košarka odvija pod strogim i tačno određenim pravilima, razne vrste košarke s manjim brojem pravila učinile su košarku bližom svim ljudima. Košarka je danas jedan od najgledanijih sportova na svijetu.</p>
+                    <p>Igra se u 2 glavne verzije: američkoj NBA i međunarodnoj FIBA. Između NBA i FIBA-e postoji niz razlika: dužina trajanja utakmice, broj osobnih grešaka, dimenzije terena, ograničenja itd. Po pravilima koje propisuje FIBA, igraju se sva važna međunarodna takmičenja.</p>
+                    <p>Tijekom vremena košarka je razvila uobičajene tehnike pucanja, dodavanja i dribilinga, kao i pozicije igrača i napadački i obrambeni mehanizam.</p>
                 </div>
                 <div class="section-image">
                     <img src="lebron.jpg" alt="Lebron James" class="img-fluid sport-image" style="max-width: 400px;" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="lebron.jpg">
@@ -70,12 +70,12 @@
                 <div class="section-text">
                     <h4>Osnovna pravila</h4>
                     <p>Dok je takmičarska košarka isključivo dvoranski sport koji se odvija na terenu za košarku, manje regulirane vrste košarke mogu se igrati i kao vanjski sport na podlogama različitim od parketa, koji je standard za takmičarsku košarku.</p>
-                    <p>Dok se uobičajena takmičarska košarka odvija pod strogim i tačno određenim pravilima, razne vrste košarke s manjim brojem pravila učinile su košarku bližom svim ljudima. Košarka je danas jedan od najgledanijih sportova na svijetu.</p>
-                    
+                    <p>Dok se uobičajena takmičarska košarka odvija pod strogim i točno određenim pravilima, razne vrste košarke s manjim brojem pravila učinile su košarku bližom svim ljudima. Košarka je danas jedan od najgledanijih sportova na svijetu.</p>
+                    <p>Koš zabijen unutar luka vrijedi 2 boda, iza luka vrijedi 3 (trica), a slobodno bacanje vrijedi 1 bod. Loptom se upravlja njezinim odbacivanjem od podloge (dribling) ili međusobnim dodavanjem između suigrača. Tjelesni kontakt koji ometa igrača u igri nije dozvoljen (prekršaj). Postoje strogo određena pravila i načini na koje se lopta smije voditi.</p>
                     <h4 class="mt-4">FIBA vs NBA pravila</h4>
                     <ul class="rules-list">
                         <li>FIBA utakmica traje 40 minuta (4 četvrtine po 10 min), NBA 48 minuta (4 četvrtine po 12 min)</li>
-                        <li>U FIBA-i 5 ličnih grešaka, u NBA 6</li>
+                        <li>U FIBA-i 5 osobnih grešaka, u NBA 6</li>
                         <li>FIBA teren je 28x15m, NBA 28.65x15.24m</li>
                         <li>Udaljenost za 3 poena: FIBA 6.75m, NBA 7.24m</li>
                         <li>Trajanje napada: FIBA 24 sekunde, NBA 24 sekunde</li>
@@ -313,29 +313,47 @@
                 modalImage.src = imageUrl;
             });
 
-            //Student
-            var studentModal = document.getElementById('studentModal');
-            studentModal.addEventListener('show.bs.modal', function(event) {
-                var button = event.relatedTarget;
-                var name = button.getAttribute('data-name');
-                var birth = button.getAttribute('data-birth');
-                var live = button.getAttribute('data-live');
-                var elementary = button.getAttribute('data-elementary');
-                var high = button.getAttribute('data-high');
-                var faculty = button.getAttribute('data-faculty');
+            
+        // Student Modal
+        var studentModal = document.getElementById('studentModal');
+        studentModal.addEventListener('show.bs.modal', function(event) {
+            var button = event.relatedTarget;
+            var name = button.getAttribute('data-name');
+            var birth = button.getAttribute('data-birth');
+            var live = button.getAttribute('data-live');
+            var elementary = button.getAttribute('data-elementary');
+            var high = button.getAttribute('data-high');
+            var faculty = button.getAttribute('data-faculty');
 
-                document.getElementById('studentModalTitle').textContent = name;
+            document.getElementById('studentModalTitle').textContent = name;
+
+            
+            if (name === "Mario Jurić") {
+                
                 document.getElementById('birthLink').textContent = birth;
-                document.getElementById('birthLink').href = 'https://www.google.com/search?q=' + encodeURIComponent(birth);
+                document.getElementById('birthLink').href = 'https://www.google.com/search?q=brcko&oq=brcko&gs_lcrp=EgZjaHJvbWUqDAgAECMYJxiABBiKBTIMCAAQIxgnGIAEGIoFMgwIARAuGEMYgAQYigUyDAgCECMYJxiABBiKBTINCAMQLhiRAhiABBiKBTIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIGCAcQRRhB0gEHNjM2ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8'; 
                 document.getElementById('liveLink').textContent = live;
-                document.getElementById('liveLink').href = 'https://www.google.com/search?q=' + encodeURIComponent(live);
+                document.getElementById('liveLink').href = 'https://www.orasje.ba/'; 
                 document.getElementById('elementaryLink').textContent = elementary;
-                document.getElementById('elementaryLink').href = 'https://www.google.com/search?q=' + encodeURIComponent(elementary);
+                document.getElementById('elementaryLink').href = 'https://www.facebook.com/p/Osnovna-%C5%A1kola-Ora%C5%A1je-100076391012642/'; 
                 document.getElementById('highLink').textContent = high;
-                document.getElementById('highLink').href = 'https://www.google.com/search?q=' + encodeURIComponent(high);
-                document.getElementById('facultyLink').textContent = faculty;
-                document.getElementById('facultyLink').href = 'https://www.ferit.unios.hr';
-            });
+                document.getElementById('highLink').href = 'https://www.facebook.com/sssorasje/?locale=hr_HR'; 
+            } else if (name === "Antun Korpar") {
+                
+                document.getElementById('birthLink').textContent = birth;
+                document.getElementById('birthLink').href = 'https://www.osijek.hr/';
+                document.getElementById('liveLink').textContent = live;
+                document.getElementById('liveLink').href = 'https://belisce.hr/';
+                document.getElementById('elementaryLink').textContent = elementary;
+                document.getElementById('elementaryLink').href = 'https://os-ikukuljevica-belisce.skole.hr/';
+                document.getElementById('highLink').textContent = high;
+                document.getElementById('highLink').href = 'https://elpros.net/';
+            }
+
+            
+            document.getElementById('facultyLink').textContent = faculty;
+            document.getElementById('facultyLink').href = 'https://www.ferit.unios.hr';
+        });
 
             //Sport
             var sportModal = document.getElementById('sportModal');
